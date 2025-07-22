@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprender Ajedrez - AjedrezMaestro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chessboard.css">
+    <link rel="stylesheet" href="css/lessons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="AjedrezMaestro Logo">
+                    <span>AjedrezMaestro</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="aprender.html" class="active">Aprender</a></li>
+                    <li><a href="practicar.html">Practicar</a></li>
+                    <li><a href="puzzles.html">Puzzles</a></li>
+                    <li><a href="comunidad.html">Comunidad</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary">Iniciar sesión</button>
+                <button class="btn btn-primary">Registrarse</button>
+            </div>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="learning-header">
+            <div class="container">
+                <h1>Aprende Ajedrez</h1>
+                <p>Selecciona tu nivel y comienza tu viaje en el mundo del ajedrez</p>
+                
+                <div class="level-tabs">
+                    <button class="level-tab active" data-level="principiante">Principiante</button>
+                    <button class="level-tab" data-level="intermedio">Intermedio</button>
+                    <button class="level-tab" data-level="avanzado">Avanzado</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-content">
+            <div class="container">
+                <div class="level-content active" id="principiante">
+                    <div class="level-intro">
+                        <h2>Nivel Principiante</h2>
+                        <p>Aprende los fundamentos del ajedrez: movimientos de piezas, reglas básicas y primeros conceptos tácticos.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% completado</span>
+                        </div>
+                    </div>
+
+                    <div class="lessons-grid">
+                        <div class="lesson-card unlocked">
+                            <div class="lesson-number">1</div>
+                            <div class="lesson-content">
+                                <h3>El tablero y las piezas</h3>
+                                <p>Conoce el tablero, las piezas y su colocación inicial.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 10 minutos</span>
+                                    <span><i class="far fa-star"></i> Muy fácil</span>
+                                </div>
+                            </div>
+                            <a href="leccion.html?id=1" class="btn btn-primary">Comenzar</a>
+                        </div>
+
+                        <div class="lesson-card unlocked">
+                            <div class="lesson-number">2</div>
+                            <div class="lesson-content">
+                                <h3>Movimientos de los peones</h3>
+                                <p>Aprende cómo se mueven los peones y sus reglas especiales.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 15 minutos</span>
+                                    <span><i class="far fa-star"></i> Fácil</span>
+                                </div>
+                            </div>
+                            <a href="leccion.html?id=2" class="btn btn-primary">Comenzar</a>
+                        </div>
+
+                        <div class="lesson-card unlocked">
+                            <div class="lesson-number">3</div>
+                            <div class="lesson-content">
+                                <h3>Movimientos de las piezas</h3>
+                                <p>Torre, alfil, caballo, dama y rey: cómo se mueve cada pieza.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 20 minutos</span>
+                                    <span><i class="far fa-star"></i> Fácil</span>
+                                </div>
+                            </div>
+                            <a href="leccion.html?id=3" class="btn btn-primary">Comenzar</a>
+                        </div>
+
+                        <div class="lesson-card locked">
+                            <div class="lesson-number">4</div>
+                            <div class="lesson-content">
+                                <h3>Jaque, jaque mate y tablas</h3>
+                                <p>Aprende los conceptos básicos de jaque, jaque mate y empate.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 25 minutos</span>
+                                    <span><i class="far fa-star"></i> Medio</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary disabled">Bloqueado</a>
+                        </div>
+
+                        <div class="lesson-card locked">
+                            <div class="lesson-number">5</div>
+                            <div class="lesson-content">
+                                <h3>Reglas especiales</h3>
+                                <p>Enroque, captura al paso y promoción de peones.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 30 minutos</span>
+                                    <span><i class="far fa-star"></i> Medio</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary disabled">Bloqueado</a>
+                        </div>
+
+                        <div class="lesson-card locked">
+                            <div class="lesson-number">6</div>
+                            <div class="lesson-content">
+                                <h3>Tu primera partida</h3>
+                                <p>Pon en práctica todo lo aprendido en una partida guiada.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 20 minutos</span>
+                                    <span><i class="far fa-star"></i> Medio</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary disabled">Bloqueado</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="level-content" id="intermedio">
+                    <div class="level-intro">
+                        <h2>Nivel Intermedio</h2>
+                        <p>Mejora tu juego con tácticas, aperturas comunes y finales básicos.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% completado</span>
+                        </div>
+                    </div>
+
+                    <div class="lessons-grid">
+                        <div class="lesson-card locked">
+                            <div class="lesson-number">1</div>
+                            <div class="lesson-content">
+                                <h3>Tácticas básicas</h3>
+                                <p>Horquillas, clavadas, descubiertas y dobles ataques.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 30 minutos</span>
+                                    <span><i class="far fa-star"></i> Medio</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary disabled">Completa nivel principiante</a>
+                        </div>
+
+                        <div class="lesson-card locked">
+                            <div class="lesson-number">2</div>
+                            <div class="lesson-content">
+                                <h3>Principios de apertura</h3>
+                                <p>Control del centro, desarrollo de piezas y seguridad del rey.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 25 minutos</span>
+                                    <span><i class="far fa-star"></i> Medio</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary disabled">Completa nivel principiante</a>
+                        </div>
+
+                        <div class="lesson-card locked">
+                            <div class="lesson-number">3</div>
+                            <div class="lesson-content">
+                                <h3>Aperturas populares</h3>
+                                <p>Española, Italiana, Defensa Siciliana y más.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 45 minutos</span>
+                                    <span><i class="far fa-star"></i> Medio-Alto</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary disabled">Completa nivel principiante</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="level-content" id="avanzado">
+                    <div class="level-intro">
+                        <h2>Nivel Avanzado</h2>
+                        <p>Domina estrategias complejas, planificación y análisis profundo.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% completado</span>
+                        </div>
+                    </div>
+
+                    <div class="lessons-grid">
+                        <div class="lesson-card locked">
+                            <div class="lesson-number">1</div>
+                            <div class="lesson-content">
+                                <h3>Estrategia posicional</h3>
+                                <p>Estructuras de peones, casillas débiles y ventaja espacial.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 40 minutos</span>
+                                    <span><i class="far fa-star"></i> Difícil</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary disabled">Completa nivel intermedio</a>
+                        </div>
+
+                        <div class="lesson-card locked">
+                            <div class="lesson-number">2</div>
+                            <div class="lesson-content">
+                                <h3>Sacrificios complejos</h3>
+                                <p>Sacrificios posicionales y ataques al rey.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 35 minutos</span>
+                                    <span><i class="far fa-star"></i> Difícil</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary disabled">Completa nivel intermedio</a>
+                        </div>
+
+                        <div class="lesson-card locked">
+                            <div class="lesson-number">3</div>
+                            <div class="lesson-content">
+                                <h3>Finales técnicos</h3>
+                                <p>Finales de torre, alfil y caballo contra peones.</p>
+                                <div class="lesson-meta">
+                                    <span><i class="far fa-clock"></i> 50 minutos</span>
+                                    <span><i class="far fa-star"></i> Muy difícil</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary disabled">Completa nivel intermedio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-resources">
+            <div class="container">
+                <h2>Recursos adicionales</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Biblioteca de aperturas</h3>
+                        <p>Explora nuestra extensa biblioteca de aperturas con explicaciones detalladas.</p>
+                        <a href="biblioteca-aperturas.html" class="btn btn-secondary">Ver biblioteca</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Videotutoriales</h3>
+                        <p>Aprende con nuestros videotutoriales explicados por maestros internacionales.</p>
+                        <a href="videotutoriales.html" class="btn btn-secondary">Ver videos</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Clases en vivo</h3>
+                        <p>Participa en nuestras clases en vivo y pregunta directamente a los instructores.</p>
+                        <a href="clases-en-vivo.html" class="btn btn-secondary">Ver calendario</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tablero de análisis de Lichess -->
+        <div id="lichess-analysis"></div>
+        <script src="https://cdn.jsdelivr.net/npm/@lichess/embed@latest/dist/embed.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          lichess.embed('analysis', {
+            container: document.getElementById('lichess-analysis'),
+            fen: 'start',
+            theme: 'blue',
+            orientation: 'white',
+            coordinates: true,
+            pieces: 'cburnett'
+          });
+        });
+        </script>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="img/logo.svg" alt="AjedrezMaestro Logo">
+                        <span>AjedrezMaestro</span>
+                    </div>
+                    <p>Aprende ajedrez de forma divertida e intuitiva, desde principiante hasta maestro.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="aprender.html">Aprender</a></li>
+                        <li><a href="practicar.html">Practicar</a></li>
+                        <li><a href="puzzles.html">Puzzles</a></li>
+                        <li><a href="comunidad.html">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">Preguntas frecuentes</a></li>
+                        <li><a href="soporte.html">Soporte</a></li>
+                        <li><a href="terminos.html">Términos y condiciones</a></li>
+                        <li><a href="privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Suscríbete a nuestro boletín</h4>
+                        <form>
+                            <input type="email" placeholder="Tu correo electrónico">
+                            <button type="submit" class="btn btn-primary">Suscribirse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AjedrezMaestro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/lessons.js"></script>
+</body>
+</html>

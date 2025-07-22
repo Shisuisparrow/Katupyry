@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección: El tablero y las piezas - AjedrezMaestro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chessboard.css">
+    <link rel="stylesheet" href="css/lessons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="AjedrezMaestro Logo">
+                    <span>AjedrezMaestro</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="aprender.html" class="active">Aprender</a></li>
+                    <li><a href="practicar.html">Practicar</a></li>
+                    <li><a href="puzzles.html">Puzzles</a></li>
+                    <li><a href="comunidad.html">Comunidad</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary">Iniciar sesión</button>
+                <button class="btn btn-primary">Registrarse</button>
+            </div>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="lesson-page">
+        <div class="lesson-navigation">
+            <div class="container">
+                <div class="lesson-breadcrumbs">
+                    <a href="aprender.html">Aprender</a>
+                    <span class="separator">/</span>
+                    <a href="aprender.html?nivel=principiante">Principiante</a>
+                    <span class="separator">/</span>
+                    <span class="current">Lección 1: El tablero y las piezas</span>
+                </div>
+                <div class="lesson-controls">
+                    <button class="btn btn-icon disabled" id="prev-lesson">
+                        <i class="fas fa-chevron-left"></i> Anterior
+                    </button>
+                    <button class="btn btn-icon" id="next-lesson">
+                        Siguiente <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-container">
+            <div class="container">
+                <div class="lesson-header">
+                    <h1>Lección 1: El tablero y las piezas</h1>
+                    <div class="lesson-meta">
+                        <span><i class="far fa-clock"></i> 10 minutos</span>
+                        <span><i class="far fa-star"></i> Muy fácil</span>
+                    </div>
+                    <div class="lesson-progress">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% completado</span>
+                    </div>
+                </div>
+
+                <div class="lesson-content-wrapper">
+                    <div class="lesson-steps">
+                        <div class="lesson-step active" data-step="1">
+                            <h2>El tablero de ajedrez</h2>
+                            <p>El ajedrez se juega en un tablero cuadrado dividido en 64 casillas (8×8), alternando entre casillas claras (blancas) y oscuras (negras).</p>
+                            <p>El tablero siempre se coloca de manera que cada jugador tenga una casilla blanca en la esquina derecha más cercana.</p>
+                            
+                            <div class="lesson-note">
+                                <div class="note-icon"><i class="fas fa-lightbulb"></i></div>
+                                <div class="note-content">
+                                    <p>Un truco para recordar la orientación correcta del tablero es: "Blanca a la derecha".</p>
+                                </div>
+                            </div>
+                            
+                            <div class="lesson-task">
+                                <p>Observa el tablero y familiarízate con su disposición.</p>
+                                <button class="btn btn-primary" id="next-step">Continuar</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-step" data-step="2">
+                            <h2>Coordenadas del tablero</h2>
+                            <p>Cada casilla del tablero tiene una coordenada única, formada por una letra (columna) y un número (fila).</p>
+                            <ul>
+                                <li>Las columnas se nombran con letras de la 'a' a la 'h', de izquierda a derecha.</li>
+                                <li>Las filas se numeran del 1 al 8, de abajo hacia arriba.</li>
+                            </ul>
+                            <p>Por ejemplo, la casilla en la esquina inferior izquierda es 'a1', mientras que la esquina superior derecha es 'h8'.</p>
+                            
+                            <div class="lesson-task">
+                                <p>Haz clic en la casilla <strong>e4</strong> para continuar.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-step" data-step="3">
+                            <h2>Las piezas de ajedrez</h2>
+                            <p>Cada jugador comienza con 16 piezas:</p>
+                            <ul>
+                                <li>1 Rey (♔/♚)</li>
+                                <li>1 Dama (♕/♛)</li>
+                                <li>2 Torres (♖/♜)</li>
+                                <li>2 Alfiles (♗/♝)</li>
+                                <li>2 Caballos (♘/♞)</li>
+                                <li>8 Peones (♙/♟)</li>
+                            </ul>
+                            <p>Las piezas blancas se colocan en las filas 1 y 2, mientras que las negras en las filas 7 y 8.</p>
+                            
+                            <div class="lesson-task">
+                                <p>Observa la posición inicial de las piezas en el tablero.</p>
+                                <button class="btn btn-primary" id="next-step-3">Continuar</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-step" data-step="4">
+                            <h2>Colocación inicial</h2>
+                            <p>Las piezas se colocan en la posición inicial de la siguiente manera:</p>
+                            <ul>
+                                <li>Las torres van en las esquinas (a1, h1, a8, h8)</li>
+                                <li>Los caballos se colocan junto a las torres (b1, g1, b8, g8)</li>
+                                <li>Los alfiles se colocan junto a los caballos (c1, f1, c8, f8)</li>
+                                <li>La dama se coloca en la casilla de su color (d1 para blancas, d8 para negras)</li>
+                                <li>El rey se coloca junto a la dama (e1 para blancas, e8 para negras)</li>
+                                <li>Los peones ocupan toda la segunda fila (fila 2 para blancas, fila 7 para negras)</li>
+                            </ul>
+                            
+                            <div class="lesson-task">
+                                <p>Coloca las piezas en su posición inicial arrastrándolas al tablero.</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-step" data-step="5">
+                            <h2>¡Felicidades!</h2>
+                            <p>Has completado la primera lección sobre el tablero y las piezas de ajedrez.</p>
+                            <p>Ahora conoces:</p>
+                            <ul>
+                                <li>La estructura del tablero de ajedrez</li>
+                                <li>El sistema de coordenadas</li>
+                                <li>Las piezas y su colocación inicial</li>
+                            </ul>
+                            
+                            <div class="lesson-task">
+                                <p>¿Listo para continuar con la siguiente lección?</p>
+                                <a href="leccion.html?id=2" class="btn btn-primary">Siguiente lección: Movimientos de los peones</a>
+                                <a href="aprender.html" class="btn btn-secondary">Volver al menú de lecciones</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-board-container">
+                        <div class="board-wrapper">
+                            <div class="board-controls">
+                                <button class="btn btn-icon" id="reset-board">
+                                    <i class="fas fa-undo"></i> Reiniciar
+                                </button>
+                                <button class="btn btn-icon" id="flip-board">
+                                    <i class="fas fa-retweet"></i> Girar
+                                </button>
+                            </div>
+                            <div class="chess-board">
+                                <div class="board-inner">
+                                    <div id="lesson-squares" class="squares"></div>
+                                    <div id="lesson-pieces" class="pieces"></div>
+                                </div>
+                                <div class="board-coordinates">
+                                    <div class="files">
+                                        <span>a</span>
+                                        <span>b</span>
+                                        <span>c</span>
+                                        <span>d</span>
+                                        <span>e</span>
+                                        <span>f</span>
+                                        <span>g</span>
+                                        <span>h</span>
+                                    </div>
+                                    <div class="ranks">
+                                        <span>8</span>
+                                        <span>7</span>
+                                        <span>6</span>
+                                        <span>5</span>
+                                        <span>4</span>
+                                        <span>3</span>
+                                        <span>2</span>
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <div class="hint-container">
+                                <button class="btn btn-secondary" id="show-hint">
+                                    <i class="far fa-lightbulb"></i> Mostrar pista
+                                </button>
+                                <div class="hint-content hidden">
+                                    <p>Pista: Las casillas del tablero alternan entre blancas y negras.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lesson-quiz" id="lesson-quiz">
+            <div class="container">
+                <h2>Comprueba tu conocimiento</h2>
+                <div class="quiz-question">
+                    <p>¿Cuántas casillas tiene un tablero de ajedrez?</p>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="a">
+                            <span class="option-text">32 casillas</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="b">
+                            <span class="option-text">48 casillas</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="c">
+                            <span class="option-text">64 casillas</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="d">
+                            <span class="option-text">81 casillas</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p>¿Cuál es la coordenada de la casilla en la esquina inferior izquierda del tablero?</p>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="a">
+                            <span class="option-text">a1</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="b">
+                            <span class="option-text">h1</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="c">
+                            <span class="option-text">a8</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="d">
+                            <span class="option-text">h8</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p>¿Cuántas piezas tiene cada jugador al inicio de la partida?</p>
+                    <div class="quiz-options">
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="a">
+                            <span class="option-text">8 piezas</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="b">
+                            <span class="option-text">12 piezas</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="c">
+                            <span class="option-text">16 piezas</span>
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="d">
+                            <span class="option-text">20 piezas</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="submit-quiz">Comprobar respuestas</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="img/logo.svg" alt="AjedrezMaestro Logo">
+                        <span>AjedrezMaestro</span>
+                    </div>
+                    <p>Aprende ajedrez de forma divertida e intuitiva, desde principiante hasta maestro.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="aprender.html">Aprender</a></li>
+                        <li><a href="practicar.html">Practicar</a></li>
+                        <li><a href="puzzles.html">Puzzles</a></li>
+                        <li><a href="comunidad.html">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">Preguntas frecuentes</a></li>
+                        <li><a href="soporte.html">Soporte</a></li>
+                        <li><a href="terminos.html">Términos y condiciones</a></li>
+                        <li><a href="privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Suscríbete a nuestro boletín</h4>
+                        <form>
+                            <input type="email" placeholder="Tu correo electrónico">
+                            <button type="submit" class="btn btn-primary">Suscribirse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AjedrezMaestro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/chessboard.js"></script>
+    <script src="js/chess.js"></script>
+    <script src="js/debug.js"></script>
+    <script src="js/lesson.js"></script>
+</body>
+</html> 

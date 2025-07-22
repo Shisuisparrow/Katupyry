@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjedrezMaestro - Aprende ajedrez de forma divertida</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.svg" alt="AjedrezMaestro Logo">
+                    <span>Academia Katupyry</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="aprender.html">Aprender</a></li>
+                    <li><a href="practicar.html">Practicar</a></li>
+                    <li><a href="puzzles.html">Puzzles</a></li>
+                    <li><a href="comunidad.html">Comunidad</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary">Iniciar sesión</button>
+                <button class="btn btn-primary">Registrarse</button>
+            </div>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Aprende ajedrez de forma <span class="highlight">divertida e intuitiva</span></h1>
+                    <p>Desde principiante hasta maestro, con lecciones interactivas, puzzles y práctica en tiempo real.</p>
+                    <div class="hero-buttons">
+                        <a href="aprender.html" class="btn btn-primary btn-lg">Comenzar a aprender</a>
+                        <a href="#como-funciona" class="btn btn-secondary btn-lg">Cómo funciona</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Tablero de análisis de Lichess -->
+                    <div id="lichess-analysis"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="como-funciona">
+            <div class="container">
+                <h2>Cómo funciona AjedrezMaestro</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Aprende</h3>
+                        <p>Lecciones interactivas para todos los niveles, desde los movimientos básicos hasta estrategias avanzadas.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Practica</h3>
+                        <p>Resuelve puzzles tácticos y situaciones de juego real para mejorar tus habilidades.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chess"></i>
+                        </div>
+                        <h3>Juega</h3>
+                        <p>Pon a prueba lo aprendido jugando contra la computadora o contra otros estudiantes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Progresa</h3>
+                        <p>Sigue tu evolución con estadísticas detalladas y un sistema de niveles motivador.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-paths">
+            <div class="container">
+                <h2>Rutas de aprendizaje</h2>
+                <div class="paths-grid">
+                    <div class="path-card beginner">
+                        <h3>Principiante</h3>
+                        <p>Aprende las reglas básicas, movimientos de piezas y conceptos fundamentales.</p>
+                        <ul>
+                            <li>Movimientos de piezas</li>
+                            <li>Reglas especiales</li>
+                            <li>Jaque mate básico</li>
+                        </ul>
+                        <a href="aprender.html?nivel=principiante" class="btn btn-primary">Comenzar</a>
+                    </div>
+                    <div class="path-card intermediate">
+                        <h3>Intermedio</h3>
+                        <p>Mejora tu juego con tácticas, aperturas comunes y finales básicos.</p>
+                        <ul>
+                            <li>Tácticas básicas</li>
+                            <li>Aperturas populares</li>
+                            <li>Finales esenciales</li>
+                        </ul>
+                        <a href="aprender.html?nivel=intermedio" class="btn btn-primary">Comenzar</a>
+                    </div>
+                    <div class="path-card advanced">
+                        <h3>Avanzado</h3>
+                        <p>Domina estrategias complejas, planificación y análisis profundo.</p>
+                        <ul>
+                            <li>Estrategia posicional</li>
+                            <li>Sacrificios complejos</li>
+                            <li>Finales técnicos</li>
+                        </ul>
+                        <a href="aprender.html?nivel=avanzado" class="btn btn-primary">Comenzar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="cta">
+            <div class="container">
+                <h2>¿Listo para convertirte en maestro del ajedrez?</h2>
+                <p>Únete a miles de estudiantes que están mejorando sus habilidades cada día.</p>
+                <a href="registro.html" class="btn btn-primary btn-lg">Comenzar gratis</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="img/logo.svg" alt="AjedrezMaestro Logo">
+                        <span>Academia Katupyry</span>
+                    </div>
+                    <p>Aprende ajedrez de forma divertida e intuitiva, desde principiante hasta maestro.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="aprender.html">Aprender</a></li>
+                        <li><a href="practicar.html">Practicar</a></li>
+                        <li><a href="puzzles.html">Puzzles</a></li>
+                        <li><a href="comunidad.html">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">Preguntas frecuentes</a></li>
+                        <li><a href="soporte.html">Soporte</a></li>
+                        <li><a href="terminos.html">Términos y condiciones</a></li>
+                        <li><a href="privacidad.html">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Suscríbete a nuestro boletín</h4>
+                        <form>
+                            <input type="email" placeholder="Tu correo electrónico">
+                            <button type="submit" class="btn btn-primary">Suscribirse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Academia Katupyry. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@lichess/embed@latest/dist/embed.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  lichess.embed('analysis', {
+    container: document.getElementById('lichess-analysis'),
+    fen: 'start',
+    theme: 'blue',
+    orientation: 'white',
+    coordinates: true,
+    pieces: 'cburnett'
+  });
+});
+</script>
+</body>
+</html>
